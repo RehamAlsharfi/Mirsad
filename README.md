@@ -21,5 +21,5 @@
 - TypeScript
 
 ## Prototype
-رابط النموذج التجريبي:
+رابط النموذج الأولي:
 https://mirsad-nine.vercel.app
