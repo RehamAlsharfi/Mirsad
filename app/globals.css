@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Mirsad brand */
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-cyan: var(--cyan);
+  --color-cyan-foreground: var(--cyan-foreground);
+
+  /* Status */
+  --color-status-normal: var(--status-normal);
+  --color-status-normal-soft: var(--status-normal-soft);
+  --color-status-done: var(--status-done);
+  --color-status-done-soft: var(--status-done-soft);
+  --color-status-warn: var(--status-warn);
+  --color-status-warn-soft: var(--status-warn-soft);
+  --color-status-danger: var(--status-danger);
+  --color-status-danger-soft: var(--status-danger-soft);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+  --radius: 0.75rem;
+
+  --background: #f9fbfb;
+  --foreground: #1a293c;
+  --card: #ffffff;
+  --card-foreground: #1a293c;
+  --popover: #ffffff;
+  --popover-foreground: #1a293c;
+
+  --primary: #1a293c;
+  --primary-foreground: #f9fbfb;
+  --secondary: #eef4f4;
+  --secondary-foreground: #1a293c;
+  --muted: #eef2f4;
+  --muted-foreground: #5b6b7b;
+  --accent: #e4f3f3;
+  --accent-foreground: #0b5c61;
+  --destructive: #c62828;
+
+  --border: #e2e8ec;
+  --input: #e2e8ec;
+  --ring: #009ca5;
+
+  /* Mirsad brand */
+  --navy: #1a293c;
+  --navy-foreground: #f9fbfb;
+  --cyan: #009ca5;
+  --cyan-foreground: #ffffff;
+
+  /* Status: neutral gray / green / amber / red — distinct from brand */
+  --status-normal: #64748b;
+  --status-normal-soft: #f1f5f9;
+  --status-done: #15803d;
+  --status-done-soft: #e7f5ec;
+  --status-warn: #b45309;
+  --status-warn-soft: #fdf3e3;
+  --status-danger: #c62828;
+  --status-danger-soft: #fceaea;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'ss01';
+  }
+  /* Logical alignment helpers for RTL numeric content */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
